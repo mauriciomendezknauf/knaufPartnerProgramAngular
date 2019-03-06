@@ -1,0 +1,23 @@
+h4 {
+    color: #00aef6;
+    font-display: bold;
+    font-size: 20px;
+}
+
+p{
+    color: #58595b;
+    font-size: 15px;
+}
+
+.row {
+    padding: 40px;
+    text-align: left;
+}
+
+.row .img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,54 @@
+<ngb-tabset>
+    <!-- <ngb-tab title="Simple">
+      <ng-template ngbTabContent>
+        <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth
+        master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh
+        dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum
+        iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+      </ng-template>
+    </ngb-tab> -->
+    <ngb-tab *ngFor="let tools of mktTools">
+      <ng-template ngbTabTitle><b>{{tools.title}}</b></ng-template>
+      <ng-template ngbTabContent>
+        <div class="row">
+          <div class="col-md-6" *ngFor="let tool of tools.images">
+            <div class="row">
+              <div class="col-md-6">
+                <h4> NOMBRE </h4>
+                <p>{{tool.name}}</p>
+                <h4 *ngIf="tool.content" > CONTENIDO </h4>
+                <p *ngIf="tool.content" >{{tool.content}}</p>
+                <h4 *ngIf="tool.target" > TARGET </h4>
+                <p *ngIf="tool.target" >{{tool.target}}</p>
+                <h4>TIPO DE ARCHIVO</h4>
+                <p>{{tool.type}}</p>
+                <h4>PESO</h4>
+                <p>{{tool.weight}}</p>
+                <a class="btn btn-default" target="_blank" rel="noopener" title="Preview" href="{{tool.preview}}">VISUALIZAR</a>
+                <a class="btn btn-primary" title="DOWNLOAD" href="{{tool.download}}">DESCARGAR</a>
+              </div>
+              <div class="col-md-6 " >
+                <div class="">
+                    <img class="img-responsive" src="{{tool.image}}" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <!-- <button class=btn btn-secundary>Volver</button> -->
+            <a class="btn btn-primary btn-md" href="javascript:history.go(-1);">Volver</a>
+          </div>
+          <!-- <div class="col-md-6">
+            <app-pagination></app-pagination>
+          </div> -->
+        </div>
+      </ng-template>
+    </ngb-tab>
+    <!-- <ngb-tab title="Disabled" [disabled]="true">
+      <ng-template ngbTabContent>
+        <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam. Nulla facilisi. Donec egestas ligula vitae odio interdum aliquet. Duis lectus turpis, luctus eget tincidunt eu, congue et odio. Duis pharetra et nisl at faucibus. Quisque luctus pulvinar arcu, et molestie lectus ultrices et. Sed diam urna, egestas ut ipsum vel, volutpat volutpat neque. Praesent fringilla tortor arcu. Vivamus faucibus nisl enim, nec tristique ipsum euismod facilisis. Morbi ut bibendum est, eu tincidunt odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris aliquet odio ac lorem aliquet ultricies in eget neque. Phasellus nec tortor vel tellus pulvinar feugiat.</p>
+      </ng-template>
+    </ngb-tab> -->
+  </ngb-tabset>

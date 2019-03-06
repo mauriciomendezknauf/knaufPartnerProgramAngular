@@ -1,0 +1,83 @@
+<div class="page__login">
+  <header class="header content">
+    <div class="header-video">
+        <video autoplay="true" preload="auto" muted loop="true" >
+          <source src="assets/TypingonKeyboardStockVideo.mov" />
+        </video>
+    </div>
+    <div class="header-overlay"></div>
+    <div class="header-content">
+      <div class="page__login__block">
+        <div class="row">
+          <div class="col-xl-6">
+            <div class="page__login__block__promo ">
+              <h1 class="mb-3">
+                <strong>BIENVENIDOS AL PARTNER PROGRAM KNAUF COLOMBIA</strong>
+              </h1>
+              <p>Participar del Programa implica cumplir con una serie de objetivos de ventas, marketing y profesionalización 
+                  explorando nuevas oportunidades de negocio, acompañado de la mano de expertos y técnicos capacitados.
+              </p>
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <div class="page__login__block__inner">
+              <h4 class="text-uppercase ">
+                <strong>Partner Program</strong>
+              </h4>
+              <div class="form-group">
+                <div *ngIf="registerUserResError" class="alert alert-danger" role="alert">
+                  {{ registerUserResError }}
+                </div>
+                <!-- <div *ngIf="registerUserRes" class="alert alert-success" role="alert">
+                  {{ registerUserRes }}
+                </div> -->
+              </div>
+              <form id="form-validation" name="form-validation" class="text-left " (submit)="login()" >
+                <div class="form-group">
+                  <label class="form-label">Usuario</label>
+                  <input id="validation-email"
+                    class="form-control"
+                    placeholder="Ingrese el usuario"
+                    name="validation[email]"
+                    type="email"
+                    data-validation="[EMAIL]"
+                    [(ngModel)]="userName">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Contraseña</label>
+                  <input id="validation-password"
+                    class="form-control password"
+                    name="validation[password]"
+                    type="password" data-validation="[L>=6]"
+                    data-validation-message="$ must be at least 6 characters"
+                    placeholder="Ingrese la contraseña"
+                    [(ngModel)]="userPassword">
+                </div>
+                <div class="form-group blue-text">
+                  <a class="pull-right blue-text" mdbWavesEffect routerLink="/forgetpassword" routerLinkActive="active"><u> Olvidé mi contraseña </u></a>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="example6" checked>
+                        Recuérdame
+                    </label>
+                  </div>
+                </div>
+                <div class="form-actions text-center">
+                  <button class="btn btn-primary mr-3" [disabled]="!userName || !userPassword">Ingresar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page__login__footer text-center">
+        <ul class="list-unstyled list-inline">
+          <li class="list-inline-item"><a href="javascript: void(0);">Términos de uso</a></li>
+          <li class="list-inline-item"><a href="javascript: void(0);">Información confidencial</a></li>
+          <li class="list-inline-item"><a href="javascript: void(0);">Soporte</a></li>
+          <li class="list-inline-item"><a href="javascript: void(0);">Contáctenos</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+</div>

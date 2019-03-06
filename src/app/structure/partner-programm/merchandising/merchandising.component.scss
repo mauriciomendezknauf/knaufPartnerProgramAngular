@@ -1,0 +1,58 @@
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.merchandising {
+    padding: 40px;
+}
+// .merchandising_text {
+//     padding-right: 40px;
+//     padding-top: 0px;
+//     padding-left: 15px;
+//     padding-bottom: 40px;
+// }
+
+.merchandising>p {
+    font-family: 'FuturaStd' ,Tahoma, Arial, Helvetica, sans-serif;
+    color: #6d6e70;
+    font-size: 20px;
+    text-align: left;
+}
+.merchandising>h1{
+    color: #00aef6;
+    font-size: 40px;
+}
+.merchandising_text>p {
+    font-family: 'FuturaStd',Tahoma, Arial, Helvetica, sans-serif;
+    color: #6d6e70;
+    font-size: 15px;
+    text-align: left;
+}
+
+.form-group>h3{
+    color: #59595c;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: left;
+}
+.form-group>p{
+    color: #59595c;
+    font-size: 15px;
+    text-align: left;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 56px;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.row {
+    padding-top: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+}

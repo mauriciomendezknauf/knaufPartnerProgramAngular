@@ -1,0 +1,70 @@
+<div class="contactLogo">
+    <app-logo></app-logo>
+</div>
+<p>
+    <ngb-alert *ngIf="alert.contactMessage" [type]="alert.contacType" (close)="alert.contactMessage = null">
+        {{ alert.contactMessage }}
+    </ngb-alert>
+</p>
+<form #userForm="ngForm" (ngSubmit)="send(userForm.value);userForm.reset()" novalidate>
+    <div class="contact text-left">
+        <h2> CONTÁCTENOS </h2>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="col-sm-12 form-group">
+                    <label for="names"> NOMBRE Y APELLIDO* </label>
+                    <input class="form-control" type="text" placeholder="" name="names" ngModel #name="ngModel" required>
+                    <p *ngIf="name.touched && !name.valid">
+                        <ngb-alert [dismissible]="false" [type]="alert.type">{{alert.message}}</ngb-alert>
+                    </p>
+                </div>
+                <div class="col-sm-12 form-group">
+                    <label for="emailAdress"> EMAIL* </label>
+                    <input class="form-control" type="email" placeholder="" name="emailAdress" ngModel #email="ngModel" required>
+                    <p *ngIf="email.touched && !email.valid">
+                        <ngb-alert [dismissible]="false" [type]="alert.type">{{alert.invalidMessage}}</ngb-alert>
+                    </p>
+                </div>
+                <div class="col-sm-12 form-group ">
+                    <label for="phone"> TELÉFONO* </label>
+                    <input class="form-control" type="number" placeholder="" name="phone" ngModel #phone="ngModel"  required>
+                    <p *ngIf="phone.touched && !phone.valid">
+                        <ngb-alert [dismissible]="false" [type]="alert.type">{{alert.message}}</ngb-alert>
+                    </p>
+                </div>
+                <div class="col-sm-12 form-group">
+                    <label for="cellphone"> CELULAR </label>
+                    <input class="form-control" type="number" placeholder="" name="cellphone" ngModel #cellphone="ngModel" >
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="col-sm-12 form-group">
+                    <label for="textarea"> CONSULTA* </label>
+                    <textarea class="form-control" name="textarea" id="" rows="5" ngModel #textarea="ngModel" required></textarea>
+                    <p *ngIf="textarea.touched && !textarea.valid">
+                        <ngb-alert [dismissible]="false" [type]="alert.type">{{alert.message}}</ngb-alert>
+                    </p>
+                </div>
+                <!-- <div class="col-sm-12 form-group">
+                    <label for="">Código de verificación* </label>
+                    <input class="form-control" type="text" name="" id="">
+                </div> -->
+                <div class="col-sm-12 form-group">
+                    <label for=""> CÓDIGO DE VERIFICACIÓN* </label>
+                    <re-captcha (resolved)="resolved($event)" siteKey="6LdoeWEUAAAAAGL0RRryTqRWX0yqzYTopmdfXtiN" required></re-captcha>
+                </div>
+                <div class="col-sm-12 form-group">
+                    <p >* Datos Obligatorios.</p>
+                </div>
+                <div class="form-group text-right">
+                    <button type="submit" class="btn btn-sm btn-primary" [disabled]="!captcha && !userForm.form.valid" > Enviar </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+  
+

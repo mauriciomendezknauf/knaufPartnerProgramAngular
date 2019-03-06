@@ -1,0 +1,38 @@
+
+.icon-circle {
+    // background-color: #00aef6;
+    color: #00aef6;
+    padding: 6px 4px;
+    width: 27px;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 100%;
+}
+h3 {
+    font-family: 'FuturaStd' ,Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 23px;
+    color: #00aef6;
+    font-size: 23px;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+    // font-weight: bold;
+    cursor: pointer;
+    text-align: left;
+}
+p {
+    color: #6d6e70;
+    text-align: justify;
+    font-family: 'FuturaStd' ,Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+li {
+    color: #6d6e70;
+    background-image: url(https://www.knauf.com.ar/themes/bootstrap/img/bullet_footer.png);
+    background-repeat: no-repeat;
+    background-position: left 10px;
+    padding-left: 12px;
+    font-family: 'FuturaStd' ,Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    list-style: none
+}

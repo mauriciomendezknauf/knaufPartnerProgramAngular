@@ -1,0 +1,18 @@
+<header *ngIf="activeSession">
+  <div class="fixed-top col-md-10 offset-md-1">
+    <!-- navbar fixed-top navbar-expand-lg navbar-dark white scrolling-navbar intro-fixed-nav -->
+    <app-navbar></app-navbar>
+    <!-- Barra de navegación del partnet programm -->
+    <app-navbar-partner-programm *ngIf="navbarPartnerProgram"></app-navbar-partner-programm>
+  </div>
+</header>
+  <!-- Main -->
+  <main class="text-center navbar-expand-lg col-md-10 offset-md-1">
+    <!-- <div class="row"> -->
+    <router-outlet (activate)="changeOfRoutes()"></router-outlet>
+    <!-- </div> -->
+  </main>
+    <!-- /.Main -->
+  <!--Main Layout-->
+
+<footer-imix ></footer-imix>

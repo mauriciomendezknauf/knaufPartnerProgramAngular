@@ -1,0 +1,139 @@
+<!-- <app-logo></app-logo> -->
+<!-- <app-logo></app-logo> -->
+<!-- <div class="logoP col-md-8 offset-2">
+    <img class="img-responsive" src="assets/home/Principal_Partner.jpg" alt="Partner Programm">
+</div> -->
+<!-- Carousel -->
+<!-- <ngbd-carousel-basic></ngbd-carousel-basic>
+<form >
+  <div class="col-md-6 offset-3">
+      <div class="form-group">
+          <label for="exampleInputEmail1">Usuario</label>
+          <input type="text" class="form-control" id="exampleInputUser" aria-describedby="userHelp" placeholder="User login">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Contraseña</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+        </div>
+        <button type="button" (click)="login()" class="btn btn-primary">Ingresar</button>
+  </div>
+    
+  </form> -->
+
+  <div class="page__login" style="background-image: url(assets/home/Principal_Partner_logo.jpg)">
+    <div class="page__login__header text-left">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="page__login__header__logo">
+                    <a href="javascript: history.back();">
+                        <img src="assets/menu/logo_partner_programm.png" alt="Partner Program" />
+                    </a>
+                    <!-- <a href="javascript: void(0);" class="btn btn-sm btn-outline ml-3 switch-to-fullscreen">Switch Fullscreen / Windowed</a>
+                    <a href="javascript: void(0);" class="btn btn-sm btn-outline ml-3 random-bg-image" data-img="1">Randomize Background Image</a> -->
+                </div>
+            </div>
+            <!-- <div class="col-lg-4">
+                <div class="page__login__header__menu">
+                    <ul class="list-unstyled list-inline">
+                        <li class="list-inline-item"><a href="javascript: history.back();">&larr; Back</a></li>
+                        <li class="list-inline-item active"><a href="javascript: void(0);">Login</a></li>
+                        <li class="list-inline-item"><a href="javascript: void(0);">About</a></li>
+                        <li class="list-inline-item"><a href="javascript: void(0);">Support</a></li>
+                    </ul>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <div class="page__login__block">
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="page__login__block__promo blue-text text-center">
+                <h1 class="mb-3">
+                  <strong>BIENVENIDOS AL PARTNER PROGRAM KNAUF COLOMBIA</strong>
+                </h1>
+                <p>Participar del Programa implica cumplir con una serie de objetivos de ventas, marketing y profesionalización 
+                    explorando nuevas oportunidades de negocio, acompañado de la mano de expertos y técnicos capacitados.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="page__login__block__inner">
+                <div class="page__login__block__form">
+                  <h4 class="text-uppercase blue-text">
+                    <strong>Registro de usuario</strong>
+                  </h4><br />
+                  <p>
+                    <ngb-alert *ngIf="alert.message" [type]="alert.type" (close)="alert.message = null">
+                      {{ alert.message }}
+                    </ngb-alert>
+                  </p>
+                  <form (submit)="activateUser()">
+                    <div class="form-group" [ngClass]="{'has-danger':(!emailAddress.valid && !emailAddress.pristine)}">
+                      <label class="form-label">Correo electrónico</label>
+                      <input id="userEmail"
+                        class="form-control"
+                        name="userEmail"
+                        type="text"
+                        [(ngModel)]="userEmail"
+                        #emailAddress="ngModel"
+                        required
+                      >
+                      <small class="form-control-feedback" style="color:red" *ngIf="!emailAddress.valid && !emailAddress.pristine"> Correo invalido </small>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">Contraseña</label>
+                      <input id="userPassword"
+                        class="form-control"
+                        name="userPassword"
+                        type="password"
+                        [(ngModel)]="userPassword"
+                        required
+                      >
+                    </div>
+                    <div class="form-group" [ngClass]="{'has-danger':(userPassword && userPassword2 && ( userPassword != userPassword2))}">
+                        <label class="form-label">Confirmación Contraseña</label>
+                        <input id="userPassword2"
+                          class="form-control form-control-danger"
+                          name="userPassword2"
+                          type="password"
+                          [(ngModel)]="userPassword2"
+                          required
+                        >
+                        <small class="form-control-feedback" style="color:red" *ngIf="userPassword && userPassword2 && ( userPassword != userPassword2)"> Contraseña no coincide </small>
+                      </div>
+                      <div class="form-group has-success">
+                        <label class="form-control-label" for="inputSuccess1">Input with success</label>
+                        <input type="text" class="form-control form-control-success" id="inputSuccess1">
+                        <div class="form-control-feedback">Success! You've done it.</div>
+                        <small class="form-text text-muted">Example help text that remains unchanged.</small>
+                      </div>
+                    <div class="form-actions text-center">
+                      <button type="submit" [disabled]="requestInProgress || !readyToBeSent()" class="btn btn-md btn-primary mr-3">Cambiar</button>
+                    </div>
+                    <div class="form-group text-center">
+                        <a mdbWavesEffect routerLink="/" routerLinkActive="active">Iniciar sesión</a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page__login__footer text-center">
+        <ul class="list-unstyled list-inline">
+            <li class="list-inline-item"><a href="javascript: void(0);">Términos de uso</a></li>
+            <li class="list-inline-item"><a href="javascript: void(0);">Información confidencial</a></li>
+            <li class="list-inline-item"><a href="javascript: void(0);">Soporte</a></li>
+            <li class="list-inline-item"><a href="javascript: void(0);">Contáctenos</a></li>
+        </ul>
+    </div>
+  </div>
+

@@ -1,0 +1,43 @@
+// .icon-circle {
+//     background-color: #00aef6;
+//     color: #ffffff;
+//     padding: 6px 4px;
+//     width: 35px;
+//     font-size: 150%;
+//     text-align: center;
+//     border-radius: 100%;
+// }
+.fixed-top {
+    position: fixed;
+    top: 56px;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.benefit {
+    padding: 40px;
+}
+
+.benefit>p {
+    font-family: 'FuturaStd', Tahoma, Arial, Helvetica, sans-serif;
+    color: #6d6e70;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.benefit>h2 {
+    text-align: left;
+    font-family:'FuturaStd', Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    text-transform: inherit;
+    margin-bottom: 40px;
+    color: #00aef6;
+}
+
+.benefit>p>b {
+    font-family:'FuturaStd', Tahoma, Arial, Helvetica, sans-serif;
+    color: #6d6e70;
+    font-size: 15px;
+    text-align: justify;
+}

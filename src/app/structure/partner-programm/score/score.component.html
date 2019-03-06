@@ -1,0 +1,33 @@
+<app-logo></app-logo>
+<!-- <app-table></app-table> -->
+<div class="score">
+    <h2> Planilla de puntuación </h2>
+    <p> El gran objetivo del programa consiste en reconocer el trabajo de los distribuidores. Para eso se ha
+        fijado un puntaje para cada una de las tareas señaladas, basadas en los tres pilares del programa:<br>
+        <b > Condiciones básicas, Condiciones especiales y Condiciones específicas.</b>
+    </p>
+</div>
+<div class="score" >
+    <div class="col-lg-8 offset-2">
+        <img class="img-responsive" src="assets/puntuacion/Condiciones_basicas.jpg" alt="">
+        <p class="text-center">
+            <!-- <a class="btn btn-lg btn-primary" href=""> Ver detalle </a> -->
+            <button (click)="openModal1()" class="btn btn-md btn-primary"> Ver detalle </button>
+        </p>
+    </div>
+    <div class="col-lg-8 offset-2">
+        <img class="img-responsive" src="assets/puntuacion/Condiciones_especiales.jpg" alt="">
+        <p class="text-center">
+            <!-- <a class="btn btn-lg btn-primary" href=""> Ver detalle </a> -->
+            <button (click)="openModal2()" class="btn btn-md btn-primary"> Ver detalle </button>
+        </p>
+    </div>
+    <div class="col-lg-8 offset-2">
+        <img class="img-responsive" src="assets/puntuacion/Condiciones_especificas.jpg" alt="">
+        <p class="text-center">
+            <!-- <a class="btn btn-lg btn-primary" href=""> Ver detalle </a> -->
+            <button (click)="openModal3()" class="btn btn-md btn-primary"> Ver detalle </button>
+            <button (click)="openModal4()" class="btn btn-md btn-primary"> Ver condiciones de portafolio de productos </button>
+        </p>
+    </div>
+</div>
